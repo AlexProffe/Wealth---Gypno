@@ -646,4 +646,93 @@ body {
   line-height: 24px;
   color: #005E7B;
 }
+
+#modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#modal.hidden {
+  display: none;
+}
+#modal .modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 36px 24px;
+  background-color: #fff;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 425px;
+  height: 100%;
+  min-height: 320px;
+  max-width: 480px;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#modal .modal-form .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  max-width: 320px;
+  width: 100%;
+  line-height: 20px;
+  gap: 16px;
+}
+#modal .modal-form .form-control input {
+  padding: 8px 10px;
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+  font-variant-numeric: lining-nums;
+  border: 1px solid #005E7B;
+}
+#modal .modal-form .form-control select {
+  width: 100%;
+  border: 1px solid #005E7B;
+  padding: 8px 10px;
+  font-size: 20px;
+  line-height: 24px;
+}
+#modal .modal-form .form-button {
+  color: #005E7B;
+  background-color: transparent;
+  border: 2px solid #005E7B;
+  max-width: 320px;
+  margin-top: 16px;
+}
+#modal .modal-form .form-button:hover {
+  background-color: #005E7B;
+  color: white;
+}
+#modal .modal-title {
+  font-size: 28px;
+  text-align: center;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
 /*# sourceMappingURL=main.css.map */
