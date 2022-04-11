@@ -22,13 +22,13 @@ const burgerManager = () => {
 
 burgerManager();
 
-const modalManager = () => {
+const modalManager = (formSelector) => {
     const modal = document.getElementById("modal");
-    const modalForm = document.querySelector(".modal-form");
+    const modalForm = document.querySelector(formSelector);
     const openModalButtons = document.querySelectorAll(
         'button[data-action="modal"]'
     );
-    const submitButton = modal.querySelector(".form-button");
+    const submitButton = modalForm.querySelector(".form-button");
 
     openModalButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -36,7 +36,7 @@ const modalManager = () => {
         });
     });
 
-    modalForm.addEventListener("click", (e) => {
+    modalForm && modalForm.addEventListener("click", (e) => {
         e.stopPropagation();
     });
 
@@ -44,7 +44,7 @@ const modalManager = () => {
         toggleModalVisibility();
     });
 
-    modalForm.addEventListener("submit", (e) => {
+    modalForm && modalForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const [name, phone, email, request] = modalForm;
 
@@ -58,7 +58,7 @@ const modalManager = () => {
         console.log(formData);
 
         if (modalForm.checkValidity()) {
-            toggleModalVisibility();
+            modal.classList.add('hidden');
         }
     });
 
@@ -67,4 +67,28 @@ const modalManager = () => {
     }
 };
 
-modalManager();
+modalManager('.modal-form');
+modalManager('.contact-form');
+
+const accordionManager = (selector) => {
+    const items = document.querySelectorAll(selector);
+    items.forEach(item => {
+        const control = item.querySelector(selector + '-control');
+        const content = item.querySelector(selector + '-content');
+        const icon = item.querySelector(selector + '-control-icon')
+
+        control.addEventListener('click', event => {
+            if(content.classList.contains('visible')) {
+                content.style.maxHeight = null;
+                icon.textContent = "+";
+                content.classList.remove('visible');
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = "&ndash;";
+                content.classList.add('visible');
+            }
+        })
+    });
+}
+
+accordionManager('.session');

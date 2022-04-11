@@ -1,0 +1,73 @@
+@import "modules/_vars";
+@import "modules/_clear";
+@import "modules/_common";
+@import "modules/_header";
+@import "modules/_tariff";
+@import "modules/_footer";
+@import "modules/_burger";
+@import "modules/_modal";
+@import "modules/_breadcrumbs";
+
+#hypno {
+    padding: 40px 0;
+    border-bottom: 2px solid black;
+
+    &-about {
+        padding: 40px 0;
+        border-bottom: 2px solid black;
+    }
+
+    &-types {
+        padding: 40px 0;
+        border-bottom: 2px solid black;
+    }
+
+    &-qualities {
+        padding: 40px 0;
+        border-bottom: 2px solid black;
+    }
+
+    &-tariffs {
+
+        .title {
+            color: white;
+        }
+
+        .excerpt {
+            text-align: center;
+            color: white;
+        }
+
+        padding: 40px 0;
+        border-bottom: 2px solid black;
+        background-color: $blue;
+
+        .hypno-tariffs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px 30px;
+
+            .tariff {
+                --border-color: white;
+                --title-color: white;
+            }
+        }
+    }
+}
+
+.hypno-excerpt {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.excerpt {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: initial;
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 16px 0;
+}

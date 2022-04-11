@@ -1,0 +1,291 @@
+@import "modules/_vars";
+@import "modules/_clear";
+@import "modules/_common";
+@import "modules/_header";
+@import "modules/_tariff";
+@import "modules/_footer";
+@import "modules/_burger";
+@import "modules/_modal";
+@import "modules/_breadcrumbs";
+
+
+#hypnotherapy {
+    padding: 40px 0;
+    border-bottom: 2px solid black;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hypnotherapy {
+        &-title {
+            text-transform: uppercase;
+        }
+
+        &-excerpt {
+            font-size: 18px;
+            line-height: 24px;
+            align-self: flex-start;
+            padding-bottom: 16px;
+        }
+
+        &-button {
+            max-width: 240px;
+            width: 100%;
+            margin-top: 24px;
+            background-color: $blue;
+            color: white;
+
+            &:hover {
+                background-color: transparent;
+                border-color: $blue;
+                color: $blue;
+            }
+        }
+    }
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    &-item {
+        font-size: 20px;
+        line-height: 28px;
+        padding-left: 24px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $darkblue;
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &.revert {
+            padding-right: 24px;
+            padding-left: 0;
+            text-align: right;
+
+            @media screen and (max-width: 768.01px) {
+                text-align: initial;
+                padding-left: 24px;
+                padding-right: 0;
+            }
+
+            &::before {
+                content: "";
+                background-color: $darkblue;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                left: initial;
+                right: 0;
+                transform: translateY(-50%);
+
+                @media screen and (max-width: 768.01px) {
+                    text-align: initial;
+                    right: initial;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.list-title {
+    font-size: 28px;
+    margin: 24px 0 8px;
+    align-self: flex-start;
+    width: 100%;
+    line-height: 32px;
+
+    &.revert {
+        align-self: flex-end;
+    }
+
+    @media screen and (max-width: 768.01px) {
+        text-align: center;
+    }
+}
+
+#hypnotherapy-qualities {
+    padding: 40px 0;
+
+    .hypnotherapy {
+        &-qualities {
+            display: flex;
+            gap: 0 24px;
+
+            @media screen and (max-width: 768.01px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 48px 0;
+            }
+        }
+
+        &-quality {
+            @media screen and (max-width: 768.01px) {
+                width: 100%;
+                align-self: initial;
+            }
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:last-child(1) {
+                align-items: flex-end;
+                text-align: right;
+
+                @media screen and (max-width: 768.01px) {
+                    align-self: initial;
+                }
+            }
+        }
+    }
+}
+
+#hypnotherapytherapy {
+    padding: 40px 0;
+    background-color: $blue;
+
+    .hypnotherapytherapy-tariffs {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px 30px;
+        justify-content: center;
+
+        .tariff {
+            --border-color: white;
+            --title-color: white;
+        }
+    }
+}
+
+#gypno-sessions {
+    padding: 40px 0;
+    background-color: $green;
+
+    .title {
+        color: white;
+    }
+
+    .gypno-sessions-button {
+        max-width: 320px;
+        width: 100%;
+        margin-top: 24px;
+
+        background-color: $blue;
+        color: white;
+
+        &:hover {
+            background-color: transparent;
+            color: white;
+            border-color: $blue;
+        }
+    }
+
+    .list-title {
+        color: white;
+    }
+
+    .list-item {
+        color: white;
+        line-height: 28px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .sessions {
+            display: flex;
+            flex-direction: column;
+            max-width: 660px;
+            gap: 24px 0;
+            width: 100%;
+        }
+
+        .session {
+            &-control {
+                width: 100%;
+                padding: 8px;
+                font-size: 28px;
+                color: white;
+                line-height: 32px;
+                border: 2px solid white;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-icon {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+            }
+
+            &-content {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0 16px;
+                font-size: 18px;
+                line-height: 20px;
+                color: white;
+                will-change: max-height;
+                transition: all 0.45s ease-out;
+                box-sizing: content-box;
+
+                 &.visible {
+                    opacity: 1;
+                    padding: 16px;
+                 }           
+            }
+        }
+    }
+}
+
+#hypnotherapy-preparation {
+    padding: 40px 0;
+    border-bottom: 2px solid black;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hypnotherapy-preparation {
+        &-list {
+            margin-bottom: 24px;
+        }
+
+        &-button {
+            max-width: 320px; 
+            background-color: $blue;
+            color: white;
+
+            &:hover {
+                background-color: transparent;
+                border-color: $blue;
+                color: $blue;
+            }
+        }
+    }
+}

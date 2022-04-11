@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/contact.css">
+    <title>WEALTH HYPNO | Hypnotherapy</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-navbar">
+            <div class="container">
+                <a href="#" class="header-logo">
+                    <img src="#" alt="Wealth Logotype">
+                </a>
+                <nav class="header-menu menu">
+                    <a href="../index.html" class="menu-item">Главная</a>
+                    <a href="hypnotherapy.html" class="menu-item">ГИПНОТЕРАПИЯ</a>
+                    <a href="hypno.html" class="menu-item">ГИПНОЗ</a>
+                    <a href="contact.html" class="menu-item">КОНТАКТЫ</a>
+                    <button class="menu-item" id="open-modal">&#9776;</button>
+                </nav>
+                <div class="header-contacts contacts">
+                    <a href="mailto:testmail@test.com" class="contacts-link contacts-email">
+                        testmail@test.com
+                    </a>
+                    <a href="tel:+7123456789123" class="contacts-link contacts-phone">
+                        +7 123 456 78 90
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-info">
+                <h1 class="header-title">
+                    ГИПНОТЕРАПИЯ.
+                </h1>
+                <h2 class="header-subtitle">
+                    ЛЕЧЕНИЕ ГИПНОЗОМ
+                </h2>
+                <button class="header-button common-btn" data-action="modal">
+                    Записаться
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="../index.html" class="breadcrumbs-item">Главная</a>
+            <span class="breadcrumbs-separator"> > </span>
+            <a href="contact.html" class="breadcrumbs-item active">Контакты</a>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <form class="contact-form">
+                <h2 class="form-title title">Оставьте заявку на бесплатную консультацию</h2>
+                <label for="name" class="form-control">
+                    <input type="text" id="name" placeholder="Имя" required>
+                </label>
+                <label for="phone" class="form-control">
+                    <input type="text" id="phone" placeholder="Телефон" required>
+                </label>
+                <label for="email" class="form-control">
+                    <input type="email" id="email" placeholder="Email" required>
+                </label>
+                <label for="request" class="form-control">
+                    <select id="request" required>
+                        <option disabled>Выберите программу</option>
+                        <option value="Гипнотерапия">Гипнотерапия</option>
+                        <option value="Гипно-коучинг">Гипно-коучинг</option>
+                    </select>
+                </label>
+                <button type="submit" class="form-button common-btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-menu menu">
+                <a href="index.html" class="menu-item">Главная</a>
+                <a href="hypnotherapy.html" class="menu-item">ГИПНОТЕРАПИЯ</a>
+                <a href="hypno.html" class="menu-item">ГИПНОЗ</a>
+                <a href="contact.html" class="menu-item">КОНТАКТЫ</a>
+                <a href="#" class="menu-item">Политика конфиденциальности</a>
+            </nav>
+            <h2 class="footer-copyright">
+                © Все права сохранены. Разработка сайта: <a href="https://github.com/AlexProffe">Шолохов Алексей</a>
+            </h2>
+            <h2 class="footer-copyright">
+                ИП Петров Артём Илларионович ОГРН 320774600106450 ИНН 771395830596
+            </h2>
+        </div>
+    </footer>
+
+    <div id="burger" class="hidden">
+        <div class="burger-content">
+            <nav class="burger-menu">
+                <a href="../index.html" class="menu-item">Главная</a>
+                <h3 class="menu-item">
+                    Все программы
+                </h3>
+                <div class="menu-sublist">
+                    <a href="hypnotherapytherapy.html" class="menu-subitem">Гипнотерапия</a>
+                    <a href="hypnotherapy.html" class="menu-subitem">Гипноз</a>
+                </div>
+                <a href="contact.html" class="menu-item">КОНТАКТЫ</a>
+            </nav>
+            <div class="burger-contacts contacts">
+                <a href="mailto:testmail@test.com" class="contacts-link contacts-email">
+                    testmail@test.com
+                </a>
+                <a href="tel:+7123456789123" class="contacts-link contacts-phone">
+                    +7 123 456 78 90
+                </a>
+                <a href="#" class="contacts-link">
+                    Политика конфиденциальности
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="hidden">
+        <form class="modal-form">
+            <h2 class="modal-title">Оставьте заявку</h2>
+            <label for="name" class="form-control">
+                <input type="text" id="name" placeholder="Имя" required>
+            </label>
+            <label for="phone" class="form-control">
+                <input type="text" id="phone" placeholder="Телефон" required>
+            </label>
+            <label for="email" class="form-control">
+                <input type="email" id="email" placeholder="Email" required>
+            </label>
+            <label for="request" class="form-control">
+                <select id="request" required>
+                    <option disabled>Выберите программу</option>
+                    <option value="Гипнотерапия">Гипнотерапия</option>
+                    <option value="Гипно-коучинг">Гипно-коучинг</option>
+                </select>
+            </label>
+            <button type="submit" class="form-button common-btn">Отправить</button>
+        </form>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

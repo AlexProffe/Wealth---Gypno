@@ -320,11 +320,11 @@ body {
   background-color: #3BA5C3;
 }
 
-#gypnotherapy {
+#hypnotherapy {
   padding: 64px 0;
-  background-color: #00D8A4;
+  background-color: #05dba9;
 }
-#gypnotherapy .container {
+#hypnotherapy .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +336,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-#gypnotherapy .gypnotherapy-tariffs {
+#hypnotherapy .hypnotherapy-tariffs {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,31 +348,35 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#gypnotherapy .gypnotherapy-tariffs .tariff-button {
+#hypnotherapy .hypnotherapy-tariffs .tariff {
+  --border-color: white;
+  --title-color: white;
+}
+#hypnotherapy .hypnotherapy-tariffs .tariff-button {
   background-color: #3BA5C3;
 }
-#gypnotherapy .gypnotherapy-tariffs .tariff-button:hover {
+#hypnotherapy .hypnotherapy-tariffs .tariff-button:hover {
   background-color: transparent;
   border-color: #3BA5C3;
 }
-#gypnotherapy .gypnotherapy-button {
+#hypnotherapy .hypnotherapy-button {
   margin-top: 36px;
   padding: 8px 0;
   max-width: 240px;
   color: white;
   background-color: #005E7B;
 }
-#gypnotherapy .gypnotherapy-button:hover {
+#hypnotherapy .hypnotherapy-button:hover {
   color: white;
   border-color: #005E7B;
   background-color: transparent;
 }
 
-#gypno {
+#hypno {
   padding: 64px 0;
   background-color: #3BA5C3;
 }
-#gypno .container {
+#hypno .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,7 +388,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-#gypno .gypno-tariffs {
+#hypno .hypno-tariffs {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,20 +400,26 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#gypno .gypno-button {
+#hypno .hypno-tariffs .tariff {
+  --border-color: white;
+  --title-color: white;
+}
+#hypno .hypno-button {
   margin-top: 36px;
   padding: 8px 0;
   max-width: 240px;
   color: white;
   background-color: #005E7B;
 }
-#gypno .gypno-button:hover {
+#hypno .hypno-button:hover {
   color: white;
   border-color: #005E7B;
   background-color: transparent;
 }
 
 .tariff {
+  --border-color: black;
+  --title-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,14 +430,31 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: clamp(370px, 370px, 100%);
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 4px;
+  width: 100%;
+}
+.tariff-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 .tariff-title {
   font-size: 36px;
   line-height: 40px;
-  color: white;
+  color: var(--title-color);
   text-align: center;
 }
 .tariff-price {
@@ -483,14 +510,14 @@ body {
   background: url("../assets/arrow.svg") no-repeat center/cover;
 }
 .tariff-button {
-  background-color: #00D8A4;
+  background-color: #05dba9;
   color: white;
-  border-color: #00D8A4;
+  border-color: #05dba9;
   margin-bottom: 16px;
 }
 .tariff-button:hover {
   color: white;
-  border-color: #00D8A4;
+  border-color: #05dba9;
   background-color: transparent;
 }
 
@@ -676,9 +703,8 @@ body {
   background-color: #fff;
   gap: 16px;
   overflow-y: auto;
-  max-height: 425px;
+  max-height: 450px;
   height: 100%;
-  min-height: 320px;
   max-width: 480px;
   width: 100%;
   -webkit-box-orient: vertical;

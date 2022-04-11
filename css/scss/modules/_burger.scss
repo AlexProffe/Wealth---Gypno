@@ -1,0 +1,65 @@
+#burger {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &.hidden {
+        display: none;
+    }
+
+    .burger {
+        &-content {
+            padding: 16px 0 32px 16px;
+            width: 80%;
+            background-color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+        }
+
+        &-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .menu-item {
+                font-size: 20px;
+                line-height: 24px;
+                color: $darkblue;
+                text-transform: uppercase;
+            }
+
+            .menu-sublist {
+                padding-left: 16px;
+                display: flex;
+                flex-direction: column;
+                 gap: 16px;
+            }
+
+            .menu-subitem {
+                font-size: 18px;
+                line-height: 20px;
+                color: $darkblue;
+            }
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 16px 0;
+
+            .contacts-link {
+                font-size: 18px;
+                font-variant-numeric: lining-nums;
+                line-height: 24px;
+                color: $darkblue;
+            }
+        }
+    }
+}
